@@ -1,4 +1,6 @@
 #Codigos del primer semestre de programacion DUOC UC
+from time import time
+tiempo_inicio = time();
 from colorama import Fore, init         #Detalle voluntario (Colores)
 from datetime import datetime as tiempo #Detalle voluntario (Fecha y hora)
 fecha_actual = tiempo.now() #Se obtiene la hora y fecha actual
@@ -174,8 +176,11 @@ while flaguser == False: #mienetras bandera sea falso el ciclo se repetira..
             print(f'  Descuento del %{descuentoa}: ${descuentob}');
             print("---------------------------------------------");
             print(f'  Total a pagar: ${total - descuentob}         ');
-            print("  Fecha de la compra:", formato_fecha);
+            print("  Fecha de la compra: ", formato_fecha);
             print("  Hora de la compra: ", formato_hora);
+            tiempo_final = time()
+            tiempo_ejecucion = round(tiempo_inicio - tiempo_final);
+            print("  Tiempo de ejecucion: ", tiempo_ejecucion + "Segundos";)
             print("---------------------------------------------");
             print("|\t  ¡Gracias por su compra!           |");
             print("|\t\t",Fore.YELLOW + "  Duoc"+Fore.BLUE+"UC", Fore.RESET,"                 |");
