@@ -70,7 +70,8 @@ while flaguser == False: #mienetras bandera sea falso el ciclo se repetira..
             print("|   ¡INGRESE LA OPCION CORRESPONDIENTE!   |");
             print("-"*43);
             tipo_usuario = int(input("\n(1). Diurna\n(2). Vespertina\n(3). Administrativo\n(4). Salir del programa\n\nOpcion: "));
-                
+
+               
             while flaguser:
                 print("-"*32);
                 print("|\t     [MENU]            |");
@@ -133,7 +134,8 @@ while flaguser == False: #mienetras bandera sea falso el ciclo se repetira..
                         invocar1 += 2;
                     
                     elif menu == 5:
-                            print(Fore.RED+"\n\t   ¡HA SALIDO DEL PROGRAMA!",Fore.RESET);
+                            print("\n---------------------------------------------");
+                            print(f"|{Fore.RED}\t   ¡PROGRAMA FINALIZADO!         {Fore.RESET}|");
                             break
                         
                     else:
@@ -149,7 +151,8 @@ while flaguser == False: #mienetras bandera sea falso el ciclo se repetira..
                             invocar += 2;
                         
                         elif menu == 5:
-                            print(Fore.RED+"\n\t   ¡HA SALIDO DEL PROGRAMA!",Fore.RESET);
+                            print("\n---------------------------------------------");
+                            print(f"|{Fore.RED}\t   ¡PROGRAMA FINALIZADO!         {Fore.RESET}|");
                             break
 
                         else:
@@ -173,14 +176,15 @@ while flaguser == False: #mienetras bandera sea falso el ciclo se repetira..
             print("|          Servicio de Fotocopiado          |");
             print("---------------------------------------------");
             print(f'  Subtotal: ${total}                         ');
-            print(f'  Descuento del %{descuentoa}: ${descuentob}');
+            print(f'  Descuento del %{descuentoa}: ${round(descuentob)}');
             print("---------------------------------------------");
-            print(f'  Total a pagar: ${total - descuentob}         ');
-            print("  Fecha de la compra: ", formato_fecha);
+            print(f'  Total a pagar: ${round(total - descuentob)}');
+            print("---------------------------------------------");
+            print("  Fecha de la compra:", formato_fecha);
             print("  Hora de la compra: ", formato_hora);
             tiempo_final = time()
-            tiempo_ejecucion = round(tiempo_inicio - tiempo_final);
-            print("  Tiempo de ejecucion: ", tiempo_ejecucion + "Segundos";)
+            tiempo_ejecucion = round(tiempo_final - tiempo_inicio);
+            print("  Tiempo de ejecucion:",tiempo_ejecucion," Segundos");
             print("---------------------------------------------");
             print("|\t  ¡Gracias por su compra!           |");
             print("|\t\t",Fore.YELLOW + "  Duoc"+Fore.BLUE+"UC", Fore.RESET,"                 |");
