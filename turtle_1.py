@@ -23,7 +23,7 @@ tor.goto(40,-90)
 tor.goto(-80,-150)
 tor.goto(-15,-50)
 
-#(Mano derecha de la izquierda)
+#(Mano izquierda de la izquierda)
 tor.goto(-95,0)
 tor.goto(0,0)
 
